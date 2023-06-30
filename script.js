@@ -98,14 +98,10 @@ const products2 = [
 ];
 
 const productsJpeg = products2.filter((item) => {
-  if (item.photos) {
-    if (item.photos.length > 0) {
-      return true
-    }
-  } else {
-    return false
-  }
-});
+  if (item.photos && item.photos.length > 0) return true
+  return false
+}
+);
 console.log(productsJpeg);
 
 const productsPrise = products2.sort((a, b) => a.price - b.price);
